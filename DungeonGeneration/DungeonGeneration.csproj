@@ -47,13 +47,15 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DungeonGeneration.cs" />
-    <Compile Include="IManager.cs" />
-    <Compile Include="ITransition.cs" />
+    <Compile Include="Classes\DungeonGeneration.cs" />
+    <Compile Include="Interfaces\IManager.cs" />
+    <Compile Include="Interfaces\ITransition.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\Tile.cs" />
+    <Compile Include="Models\Transition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="IRoom.cs" />
-    <Compile Include="ITile.cs" />
-    <Compile Include="Vector2.cs" />
+    <Compile Include="Interfaces\IRoom.cs" />
+    <Compile Include="Interfaces\ITile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
