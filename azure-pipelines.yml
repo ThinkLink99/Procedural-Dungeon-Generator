@@ -21,6 +21,12 @@ variables:
 steps:
 - task: NuGetToolInstaller@1
 
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
 - task: NuGetCommand@2
   inputs:
     command: pack
@@ -30,13 +36,7 @@ steps:
     patchVersion: '$(Patch)'
     packagesToPack: '$(project)'
     restoreSolution: '$(solution)'
-
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
+    
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
