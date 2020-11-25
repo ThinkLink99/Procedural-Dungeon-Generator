@@ -36,8 +36,3 @@ steps:
     patchVersion: '$(Patch)'
     packagesToPack: '$(project)'
     restoreSolution: '$(solution)'
-    
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
